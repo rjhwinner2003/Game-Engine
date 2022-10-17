@@ -14,10 +14,10 @@ void RenderEngine::prepare()
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_DEPTH_TEST);
 	cube = obj.load("test.obj");  //load it
-	//glEnable(GL_LIGHTING);
-	//glEnable(GL_LIGHT0);
-	//float col[] = { 1.0,0.0,0.0,0.0 };
-	//glLightfv(GL_LIGHT0, GL_DIFFUSE, col);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
+	float col[] = { 1.0,0.0,0.0,0.0 };
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, col);
 }
 
 void RenderEngine::render(SDL_Window *window, int WinWidth, int WinHeight)
